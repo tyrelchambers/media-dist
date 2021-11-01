@@ -3,11 +3,19 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import { DASHBOARD, LOGIN, REGISTER } from "./routes/index.routes";
+import {
+  CALLBACK_YOUTUBE,
+  DASHBOARD,
+  INTEGRATIONS,
+  LOGIN,
+  REGISTER,
+} from "./routes/index.routes";
 import Signup from "./pages/Signup/Signup";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import { QueryClient, QueryClientProvider } from "react-query";
 import Login from "./pages/Login/Login";
+import Integrations from "./pages/Integrations/Integrations";
+import CallbackYoutube from "./pages/Callbacks/CallbackYoutube";
 
 const queryClient = new QueryClient();
 
@@ -16,9 +24,11 @@ ReactDOM.render(
     <React.StrictMode>
       <Router>
         <Switch>
-          <Route path={DASHBOARD} component={Dashboard} />
-          <Route path={LOGIN} component={Login} />
-          <Route path={REGISTER} component={Signup} />
+          <Route exact path={DASHBOARD} component={Dashboard} />
+          <Route exact path={LOGIN} component={Login} />
+          <Route exact path={REGISTER} component={Signup} />
+          <Route exact path={INTEGRATIONS} component={Integrations} />
+          <Route exact path={CALLBACK_YOUTUBE} component={CallbackYoutube} />
         </Switch>
       </Router>
     </React.StrictMode>

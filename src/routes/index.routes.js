@@ -4,4 +4,6 @@ export const REGISTER = "/register";
 export const FORGOT_PASSWORD = "/forgot-password";
 export const RESET_PASSWORD = "/reset-password";
 export const DASHBOARD = "/dashboard";
-export const PROFILE = "/profile";
+export const ACCOUNT = "/dashboard/account";
+export const INTEGRATIONS = "/dashboard/integrations";
+export const CALLBACK_YOUTUBE = "/callback/youtube";
